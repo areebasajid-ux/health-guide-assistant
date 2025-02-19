@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthGuide Assistant</title>
+    <link rel="stylesheet" href="healthguide.css">
+</head>
+<body>
+
+<header>
+    <h1>HealthGuide Assistant</h1>
+</header>
+
+<div class="container">
+   
+
+    <!-- 2. Personalized Health Tracker -->
+    <h1>Health Recommendations</h1>
+    <label for="age">Age:</label>
+    <input type="number" id="age" placeholder="Enter your age">
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight in kg">
+
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height in cm">
+
+    <button onclick="showHealthRecommendations()">Get Recommendations</button>
+    <p id="recommendations"></p>
+</div>
+    <!-- 3. Daily Health Tips -->
+    <div class="section tips">
+        <h2>Daily Health Tip</h2>
+        <div class="tip" id="daily-tip">Enter your details above to receive a personalized health tip.</div>
+    </div>
+    <audio id="relaxing-music" src="Recording (6).m4a" loop></audio>
+
+    <!-- 4. Stress Reliever Section -->
+    <div class="section stress-relief">
+        <h2>Stress Reliever</h2>
+        <p>Take a moment to relax and rejuvenate with our guided exercises and tools.</p>
+    
+        <!-- Breathing Exercise -->
+        <div class="exercise breathing">
+            <h3>Breathing Exercise</h3>
+            <div id="breathing-animation">
+                <div class="circle" id="breathing-circle"></div>
+                <p id="breathing-step">Press Start to begin!</p>
+            </div>
+            <button onclick="startBreathingExercise()">Start Breathing Exercise</button>
+            <button onclick="stopBreathingExercise()">Stop</button>
+        </div>
+    
+        <!-- Mood Selector -->
+        <div class="mood-selector">
+            <h3>How are you feeling?</h3>
+            <div id="mood-animation">
+                <button onclick="setMood('Happy')">😊 Happy</button>
+                <button onclick="setMood('Stressed')">😟 Stressed</button>
+                <button onclick="setMood('Anxious')">😰 Anxious</button>
+                <p id="mood-message"></p>
+            </div>
+        </div>
+    
+       
+    <div class="additional-options">
+        <h3>Relaxation Options</h3>
+    
+        <!-- Guided Meditation -->
+        <div class="exercise meditation">
+            <button onclick="startMeditation()">Start Guided Meditation</button>
+            <audio id="meditation-audio" src="sunflower-street-drumloop-85bpm-163900.mp3"></audio>
+        </div>
+    
+        <!-- Relaxing Music -->
+        <div class="exercise music">
+            <button onclick="playRelaxingMusic()">Play Relaxing Music</button>
+            <audio id="relaxing-music" src="relaxing-music.mp3" loop></audio>
+        </div>
+    
+        <div class="exercise stretching">
+            <button onclick="startStretchingExercise()">Start Stretching Exercise</button>
+            <audio id="stretching-audio" src="stretching-guide.mp3"></audio>
+            <div id="stretching-recommendations" class="instructions">
+                <h3>Stretching Recommendations</h3>
+                <p id="current-stretch">Press Start to begin your stretching exercise!</p>
+            </div>
+        </div>
+        <div id="stretching-timer"></div>
+
+        
+    
+    
+    <!-- 5. Dietary Recommendations -->
+    <ul id="diet-tips"></ul>
+    <input type="text" id="new-tip" placeholder="Enter a new tip">
+    <button id="add-tip-button">Add Tip</button>
+    
+
+    <!-- 6. Symptom Checker -->
+    <div class="section symptoms">
+        <h2>Symptom Checker</h2>
+        <select id="symptom">
+         <option value="headache">Headache</option>
+         <option value="fever">Fever</option>
+         <option value="fatigue">Fatigue</option>
+         <option value="cough">Cough</option>
+         <option value="shortness-of-breath">Shortness of Breath</option>
+         <option value="chest-pain">Chest Pain</option>
+         <option value="dizziness">Dizziness</option>
+         <option value="nausea">Nausea</option>
+     </select>
+     <button onclick="checkSymptoms()">Check</button>
+     <p id="symptom-solution"></p>
+ </div>
+    <!-- 7. Medicine Reminder Section -->
+<div class="section medicine-reminder">
+   <h2>Medicine Reminder</h2>
+
+   <!-- User inputs for setting a medicine reminder -->
+   <label for="medicine-name">Medicine Name: </label>
+   <input type="text" id="medicine-name" placeholder="Enter medicine name" />
+
+   <br />
+
+   <label for="time-select">Select Reminder Time: </label>
+   <select id="time-select">
+       <option value="5">5 minutes</option>
+       <option value="10">10 minutes</option>
+       <option value="15">15 minutes</option>
+       <option value="30">30 minutes</option>
+       <option value="60">1 hour</option>
+   </select>
+
+   <br />
+
+   <button onclick="setMedicineReminder()">Set Medicine Reminder</button>
+
+   <p id="reminder-message"></p>
+</div>
+
+    <!-- 8. Chatbot -->
+    <div class="section chatbot">
+        <h2>Chatbot</h2>
+        <input type="text" id="chat-input" placeholder="Ask a health question...">
+        <button onclick="chatbotResponse()">Send</button>
+        <p id="chat-response"></p>
+    </div>
+
+    <!-- 9. Health Goals Reminder -->
+   <!-- Health Goals Reminder Section -->
+<div class="section reminders">
+   <h2>Health Goals Reminder</h2>
+   <label for="reminder-time">Set Reminder Time:</label>
+   <input type="time" id="reminder-time">
+   <button onclick="setReminder('Drink Water')">Drink Water</button>
+   <button onclick="setReminder('Stretch')">Stretch</button>
+   <button onclick="setReminder('Take a Break')">Take a Break</button>
+   <p id="reminder-message"></p>
+</div>
+
+    <!-- 10. Health Myths Buster -->
+    <div class="section myths">
+      <h2>Health Myths Buster</h2>
+      <button onclick="showMyth()">Show a Myth</button>
+      <p id="myth-display"></p>
+  </div>
+  
+</div>
+
+<script src="healthguide.js"></script>
+
+</body>
+</html>

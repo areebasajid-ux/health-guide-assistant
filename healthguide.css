@@ -1,0 +1,299 @@
+/* CSS File: healthguide.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* General body styling */
+ /* Input fields styling */
+ input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Recommendations paragraph styling */
+#recommendations {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e7f3e7;
+    font-size: 16px;
+    color: #2c662d;
+    display: none; /* Initially hidden */
+}
+
+/* Alert text for invalid fields */
+.alert {
+    color: red;
+    font-size: 14px;
+}
+.section.tips {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+}
+
+.section.tips h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #2a5d84;
+}
+
+.tip {
+    font-size: 16px;
+    color: #333;
+}
+/* General Section Styling */
+.section.stress-relief {
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f4fdf4;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+.section.stress-relief h2 {
+    font-size: 24px;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+/* General Section Styling */
+/* General Section Styling */
+.section.stress-relief {
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f4fdf4;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Section Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Breathing Animation */
+#breathing-animation {
+    margin-top: 20px;
+    position: relative;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #a5d6a7;
+    animation: breathe 4s infinite ease-in-out;
+    display: none;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        background-color: #a5d6a7;
+    }
+    50% {
+        transform: scale(1.5);
+        background-color: #81c784;
+    }
+}
+
+/* Mood Animation */
+#mood-animation button {
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: buttonPop 0.5s ease-in-out infinite alternate;
+}
+
+@mood-animation:hover {
+    transform: scale(1.1);
+}
+
+@keyframes buttonPop {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+#stretching-recommendations {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #f9fdf9;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#stretching-recommendations h3 {
+    font-size: 18px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+#current-stretch {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section {
+    margin-bottom: 2rem;
+}
+.section h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+.chatbot {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.chatbot input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.chatbot button {
+    padding: 0.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.tip {
+    padding: 1rem;
+    background-color: #e7f5e6;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 1rem;
+}
+.timer {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.stop-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stop-button:hover {
+    background-color: #e53935;
+}
+#symptom-solution {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#reminder-message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+#myth-display {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#custom-time {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+#reminder-message {
+    margin-top: 20px;
+    font-size: 18px;
+}
